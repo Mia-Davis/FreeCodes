@@ -1,0 +1,31 @@
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap" rel="stylesheet">
+<style>
+	#image{
+	width:100%;
+	height:auto;}
+	
+	#img-div{
+	width:50%;
+	margin:0 auto;}
+	
+	#main{
+	font-family: 'Antic Slab', serif;
+	text-align:center;}
+</style>
+</head>
+<body id="main">
+  <h1 id="title">Martin Luther King Jr.</h1>
+  <div id="img-div">
+      <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Martin_Luther_King%2C_Jr..jpg/440px-Martin_Luther_King%2C_Jr..jpg" alt="Portrait of King">
+      <div id="img-caption">King in 1964</div>
+  </div id="tribute-info">
+  <h2>Favourite Quotes</h2>
+  <p>"We are not makers of history. We are made by history."</p>
+  <p>"Every man must decide whether he will walk in the light of creative altruism or in the darkness of destructive selfishness."</p>
+  <p>"Science investigates; religion interprets. Science gives man knowledge, which is power; religion gives man wisdom, which is control. Science deals mainly with facts; religion deals mainly with values. The two are not rivals."</p>
+  <p>"There is nothing more tragic than to find an individual bogged down in the length of life, devoid of breadth."</p>
+  <p>"There can be no deep disappointment where there is not deep love."</p>
+<p>Find more quotes at  <a id="tribute-link" target="_blank" href="https://www.keepinspiring.me/martin-luther-king-jr-quotes/">keepinspiring.me</a></p>
+</div>
+</body>
