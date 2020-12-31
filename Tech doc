@@ -1,0 +1,167 @@
+<head>
+    <title>Technical Documentation Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+<style>
+body{
+    font-family: 'Titillium Web', sans-serif;
+}
+#navbar{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    min-width: 200px;
+    width: 250px;
+    height: auto;
+    text-align: center;
+    overflow-y: auto;
+    background-color: rgb(240, 240, 240);
+}
+#navbar-ul{
+    list-style:none ;
+    padding: 0;
+}
+.nav-li{
+    width: 100%;
+    border-top: 2px solid;
+    
+}
+.nav-link{
+    font-size: large;
+    width:100%;
+    height: 30px;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    
+}
+.nav-link:hover{
+    font-weight: 800;
+    
+
+}
+#navbar-header{
+    font-size: xx-large;
+}
+
+#main-doc{
+    margin: 0 0 50px 260px;
+}
+header{
+    font-size: x-large;
+    font-weight: bold;
+}
+.code{
+    background-color: lightgray
+}
+@media (max-width: 800px){
+    #navbar{
+        width:100%;
+        height: 200px;
+        position: relative;
+    }
+    #main-doc{
+        margin: 0 0 50px 0;
+    }
+}
+</style>
+</head>
+<nav id="navbar">
+    <header id="navbar-header">Font Size</header>
+    <ul id="navbar-ul">
+    <li class="nav-li"><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li class="nav-li"><a class="nav-link" href="#Absolute-Size_Keywords">Absolute-Size Keywords</a></li>
+    <li class="nav-li"><a class="nav-link" href="#Relative-Size_Keywords">Relative-Size Keywords
+    </a></li>
+    <li class="nav-li"><a class="nav-link" href="#Pixels">Pixels</a></li>
+    <li class="nav-li"><a class="nav-link" href="#EMs">EMs</a></li>
+    <li class="nav-li"><a class="nav-link" href="#REMs">REMs</a></li>
+    <li class="nav-li"><a class="nav-link" href="#Percentages">Percentages</a></li>
+    </ul>
+</nav>
+
+<main id="main-doc">
+    <h1>How to Change Text Size in HTML</h1>
+
+    <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <p>Use the CSS <code class="code">font-size</code> property to determine the size of your text.</p>
+        <p>
+            This property takes several types of values:
+            <ul>
+                <li>Keywords (absolute-size and relative-size keywords),</li>
+                <li>Length (such as pixels (px) and em units), and
+                </li>
+                <li>Percentages.</li>
+
+            </ul>
+        </p>
+        <p>The question is: which type of value should you choose and why?</p>
+        <p>That’s the question this article tackles. It’ll show you how to use the <code class="code">font-size</code> property and the differences between its many values. So the next time you need to change the font size of your text, you’ll know which value to reach for.
+        </p>
+    </section>
+
+    <section id="Absolute-Size_Keywords" class="main-section">
+        <header>Absolute-Size Keywords</header>
+        <p>The code below uses the absolute-size keyword <code class="code">small</code> to size the HTML text.</p>
+        <p>There are more absolute-size keyword options to choose from:
+            <ul>
+                <li>xx-small</li>
+                <li>x-small</li>
+                <li>small</li>
+                <li>medium</li>
+                <li>large</li>
+                <li>x-large</li>
+                <li>xx-large</li>
+                <li>xxx-large</li>
+            </ul>
+        </p>
+        <p>The value of an absolute-size keyword is determined by the browser’s default font size. Typically, that size is medium.</p>
+
+    </section>
+
+    <section id="Relative-Size_Keywords" class="main-section">
+        <header>Relative-Size Keywords</header>
+        <p>Relative-size keywords are another keyword option to consider. You have two to choose from: <code class="code">smaller</code> and <code class="code">larger</code>.</p>
+        <p>The font size of an element with a relative-size keyword is relative—larger or smaller—to its parent’s font size.</p>
+        <p>Put another way, the font size of the parent element affects the font size of the child element, as you can see below.</p>
+        <p>In this example, the relative-size keyword <code class="code">smaller</code> is applied to the child element, and the absolute-size value <code class="code">large</code> is applied to the parent element.</p>
+    </section>
+
+    <section id="Pixels" class="main-section">
+        <header>Pixels</header>
+        <p>Pixels are an absolute length unit. That means, they're not affected by other elements, like the parent element, or the window size.</p>
+        <p>As a result, pixels are precise: you define the exact number of pixels you need on an element and that’s typically what you get. However, there may be slight differences between browsers.</p>
+        
+        <p>Notice that the child elements use <code class="code">pixels</code> and have the same font size in the code sample above.</p>
+    </section>
+
+    <section id="EMs" class="main-section">
+        <header>EMs</header>
+        <p>While you can think of pixels as fixed, think of em values as variable.</p>
+        <p>That’s because em values are a relative length unit. The font size of an element that uses an em value is relative to the font size of its parent.</p>
+        <p>However, say you haven’t set a font size for the parent element. Nor have you set one elsewhere higher up in the DOM. In this case, the em value is calculated using the browser’s default (often 16px).</p>
+        <p>Let’s make this idea concrete.</p>
+        <p>Say the parent element is set to 30px and the child element is set to 2em. Then, the child element’s rendered font size is 60px (2 x 30px = 60px).</p>
+        <p>em values can be problematic due to their compounding effect, which is demonstrated in the following example.</p>
+        <p>When you have multiple elements that use em values nested within each other, the font size values compound: they get larger and larger. This is the compounding effect in action.</p>
+    </section>
+
+    <section id="REMs" class="main-section">
+        <header>REMs</header>
+        <p>Enter rem values, which were created to deal with the compounding problem of ems.</p>
+        <p>Recall that em values are relative to the parent element. In contrast, rem values are relative to the font size of the root (html) element.</p>
+        <p>This means you can apply a rem value to an element, and it won’t be affected by the parent’s font size. This evades the compounding effect we experienced above.</p>
+        <p>This example uses the <code class="code">font-size</code> property with a rem value.</p>
+        <p>Here's a key point from the above example: the font size of the parent element does not affect the font size of the child elements.</p>
+    </section>
+
+    <section id="Percentages" class="main-section">
+        <header>Percentages</header>
+        <p>Percentages offer yet one more way to set the font size relative to the parent element’s font size.</p>
+        <p>The element with the percentage refers to its parent element to determine its font size. The percentage value must be positive.</p>
+    </section>
+    
+    
+</main>
