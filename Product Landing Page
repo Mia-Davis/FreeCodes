@@ -1,0 +1,261 @@
+<style>
+    body {
+        font-family: 'Raleway',sans-serif;
+    }
+    .description-grid{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        
+    }
+    @media (max-width: 800px){
+        .description-grid{
+            flex-direction: column;
+            
+        }
+    }
+    .grey-block{
+        background-color: rgb(227, 227, 227);
+        padding: 2%;
+        margin: 1% 0 3% 0;
+        height: auto;
+
+    }
+    #description-img{
+        width: 100%;
+        height: auto; 
+        padding-right: 2%;
+        
+        border-radius: 50%;
+    }
+    #description-img-div{
+        width: 300px;
+        padding-right: 2%;
+        flex:1 0 270px;
+        align-self:center;
+    }
+    #description{
+        flex:5 1 500px;
+        align-self:center;
+        width: 95%;
+        font-size: 20px;
+    }
+    header{
+        background-color: white;
+    }
+    #header-background{
+        background-color: white;
+        width: 100%;
+        height: 200px;
+    }
+    #header-div{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: white;
+    }
+
+    #nav-bar{
+        font-size: 25px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px;
+        border-bottom-style:solid;
+        border-width: 5px;
+        width: 100%;
+        height: auto;
+        position:fixed;
+        top: 160px;
+        left: 0;
+        right: 0;
+        background-color: white;
+    
+    }
+    .nav-link{
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+    .nav-link:hover{
+        background-color:   rgb(227, 227, 227);
+        
+    }
+    .anchor {
+    position: absolute;
+    margin: -210px
+    }
+    .video{
+        text-align: center;
+    }
+    #reviews-title  {
+        margin: 0;
+    }
+    #reviews{
+        background-color: rgb(227, 227, 227);
+        height: auto;
+        padding: 2%;
+        
+    }
+    #review-flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #review-grid{
+        display: grid;                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+        grid-template-columns: auto;
+        grid-template-rows: 90px auto 80px ;
+        grid-template-areas: 
+        "icon" 
+        "review"
+        "name";
+        margin: 2%;
+        background-color: white;
+        width: 30%;
+        text-align: center;
+        height:auto;
+
+        
+    }
+@media (max-width: 800px){
+    #review-grid{
+        display: grid;
+        grid-template-columns: 100px auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "icon review"
+        "icon name";
+        width: 90%;
+        text-align: left;
+        height: auto;
+    }
+    #review-flex{
+        flex-direction: column;
+
+    }
+    #review-text{
+        grid-area: review;
+        padding: 2% 2% 0 0;
+        height: auto;
+    }
+    #review-name{
+        grid-area: name;
+        padding: 0 0 0 4%;
+    }
+    #speech-icon-div{
+        align-self: center;
+        margin: auto auto auto -10px !important;
+    }   
+}
+    #speech-icon-div{
+        width: 130px;
+        grid-area: icon;
+        margin: 0 auto;       
+        
+    }
+    #speech-icon{
+        width: 100%;
+        height: auto;
+    }
+    #review-text{
+        grid-area: review;
+        padding: 2% 4% 0 4%;
+    }
+    #review-name{
+        grid-area: name;
+        padding: 2% 0 2% 4%;
+        font-size: 20px;
+        font-weight: 1000;
+    }
+
+    #email{
+        font-family: 'Raleway',sans-serif;
+        font-size: 16px;
+        text-align: center;
+        width: 50%;
+        height: 30px;
+    }
+    #submit{
+        font-family: 'Raleway',sans-serif;
+        font-size: 16px;
+        height: 30px;
+
+
+    }
+    #form{
+        text-align: center;
+        padding: 5px 0;        margin-bottom: 20px;
+    }
+
+
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+<html>
+<header id="header">
+    <div id="header-background"></div>
+    <div id="header-div"><img id="header-img"  src="https://www.boots.com/resource/blob/2451576/cd65797c278dac424b879e8485b9328b/2020-08-the-ordinary-overlays-data.png" alt="company logo"></div>
+    <nav id="nav-bar">
+        <a class="nav-link" href="#description-nav">Description</a>
+        <a class="nav-link" href="#our-team-tries-nav">Our team tries</a>
+        <a class="nav-link" href="#reviews-nav">Reviews</a>
+    </nav>
+</header>
+<body>
+    
+    <div class="grey-block">
+        <h1 id="title">AHA 30% + BHA 2% Peeling Solution</h1>
+        <div class=description-grid>
+            <div id="description-img-div"><img id="description-img" src="https://www.ahlens.se/INTERSHOP/static/JOB/Ahlens-AhlensSE-Site/-/Ahlens/sv_SE/ProductList/78APIN90WQ_0769915191004_front.jpg" alt="Exfoliating facial bottle and box"></div>
+            <div class="anchor" id="description-nav"></div>
+            <p id="description">With 30% Alpha Hydroxy Acids (Glycolic/Lactic/Tartaric/Citric), 2% Beta Hydroxy Acid (Salicylic Acid), Hyaluronic Acid Crosspolymer, Vitamin B5, Black Carrot and Tasmanian Pepperberry.
+            <br>
+            <br>
+            Alpha hydroxy acids (AHA) exfoliate the skin's topmost surface for a brighter and more even appearance. Beta hydroxy acids (BHA) also exfoliate the skin with an extended function to help clear pore congestion. This combined 32% AHA/BHA solution offers deeper exfoliation to help fight visible blemishes and for improved skin radiance. The formula also improves the appearance of skin texture and reduces the look of fine lines with continued use.
+            <br>
+            <br>
+            This formula contains a studied Tasmanian Pepperberry derivative to help reduce irritation associated with acid use. This derivative is of plant origin and varies in colour seasonally and this colour variation may be apparent in the formula from time to time. This formula is further supported with a crosspolymer form of hyaluronic acid for comfort, Vitamin B5 to assist healing and black carrot as an antioxidant.</p>
+        </div>
+    </div>
+    <div class="anchor" id="our-team-tries-nav"></div>
+    <h2  id="our-team-tries">Our team tries</h2>
+    <div class="video"><iframe id="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/mBtYeu2dpjI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <br>
+    <div class="anchor" id="reviews-nav"></div>
+
+    <div  id="reviews"> 
+        <h2 id="reviews-title">Reviews</h2>
+        <div id="review-flex">
+        <div id="review-grid">
+            <div id="speech-icon-div"><img id="speech-icon" src="https://vanscape.co.uk/campervan-conversions/wp-content/uploads/2018/12/speech-mark.png" alt=""></div>
+            <p id="review-text">I just love it! What it does to the skin is pure magic. It makes my skin soft and smooth after just three times, and in general makes it healthy and helps with acne pigmentation.</p>
+            <p id="review-name">Beverley Davis</p>
+        </div>
+        <div id="review-grid">
+            <div id="speech-icon-div"><img id="speech-icon" src="https://vanscape.co.uk/campervan-conversions/wp-content/uploads/2018/12/speech-mark.png" alt=""></div>
+            <p id="review-text">This is, by far, my favorite product from The Ordinary. You can see a difference after the first use, and it only improves with time. Bought tons this year for Christmas gifts too. And not that this matters, but the color is gorgeous (though it does look like you're a vampire that just went to town on a neck after you put it on)</p>
+            <p id="review-name">Joan Short</p>
+        </div>
+        <div id="review-grid">
+            <div id="speech-icon-div"><img id="speech-icon" src="https://vanscape.co.uk/campervan-conversions/wp-content/uploads/2018/12/speech-mark.png" alt=""></div>
+            <p id="review-text">Simply incredible. I learnt about this product on Twitter and wanted to give it a try, and my skin has never been better. It's so smooth, I have less black heads and spots. I use it once a week. It tingles a little and looks scary if someone sees you with it (looks like you're covered in blood!) but it's SO great. I will never drop it!</p>
+            <p id="review-name">Heather Hughes</p>
+        </div>
+    </div>
+    </div>
+
+    <div><form id="form" action=" https://www.freecodecamp.com/email-submit">
+        <label for="email"> <h3>Want a FREE sample? Enter your Email address below!</h3></label>
+        <input id="email" type="email" name="email" placeholder="Please enter your Email here" required>
+        <input id="submit" type="submit"></input>
+<br>
+<br>
+
+    </form></div>
+</body>
+</html>
